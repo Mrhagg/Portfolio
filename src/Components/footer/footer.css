@@ -1,0 +1,14 @@
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-copy{
+  color: #FFFFFF;
+  gap: 2rem;
+}
+
+.socials{
+  
+}

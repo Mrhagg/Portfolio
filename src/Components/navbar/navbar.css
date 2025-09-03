@@ -1,0 +1,16 @@
+.navbar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.15s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #292828;
+}
+
+.navbar a.active {
+  color: #f67280;
+}
