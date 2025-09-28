@@ -2,7 +2,7 @@ import { useState } from "react";
 import './navbar.css'
 
 function Navbar() {
-  const [active, setActive] = useState('#about');
+  const [active, setActive] = useState('#home');
 
   return (
     <nav className="navbar">
@@ -16,11 +16,11 @@ function Navbar() {
       </a>
 
       <a
-        href="#about"
-        className={active === '#about' ? 'active' : ''}
-        onClick={() => setActive('#about')}
+        href="#skills"
+        className={active === '#skills' ? 'active' : ''}
+        onClick={() => setActive('#skills')}
       >
-        About
+        Skills
       </a>
 
       <a

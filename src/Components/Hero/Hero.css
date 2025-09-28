@@ -48,6 +48,7 @@
 
 .btn:hover {
   background: #c06c84;
+  color: #FFFFFF;
 }
 
 .btn.secondary {

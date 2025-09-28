@@ -1,0 +1,104 @@
+.main-container{
+  margin-top: 10rem;
+}
+
+.main-content{
+  
+}
+
+.main-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7rem;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+  font-weight: bold;
+  color: #f67280;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+
+
+.skills-grid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+  margin-top: -10rem;
+}
+
+
+
+.skill-item{
+ width: 350px;
+ background-color: transparent;
+ border: 3px solid #8383834e;
+ opacity: 1;
+ box-shadow: #FFFFFF 3px 1px 2px 2px;
+ text-align: center;
+ border-radius: 15px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-bottom: 30px;
+ padding-top: 30px;
+ height: 300px;
+ background: linear-gradient(30deg, #515170, #1c1c28);
+ position: relative;
+ overflow: hidden;
+ transition: all 0.5 ease;
+}
+
+.skill-item::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(0deg, transparent, transparent 30%, rgba(0,255,255,0.3));
+  transform: rotate(-45deg);
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.skill-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+.skill-item:hover::before{
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+  
+}
+
+.skill-image {
+  width: 100px;
+  height: auto;
+  margin-top: 30px;
+  
+}
+
+.skill-name{
+  font-family:'Times New Roman', Times, serif;  
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: start;
+  margin-left: 1rem;
+  z-index: 2;
+  position: relative;
+}
