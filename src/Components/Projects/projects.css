@@ -1,0 +1,71 @@
+.projects-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #c06c84;
+}
+
+.project-information {
+  margin-bottom: 2rem;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #c06c84;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: linear-gradient(30deg, #727282, #32324e);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  color: rgb(225, 227, 228);
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #c06c84;
+}
+
+.project-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-description {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: #d0c8c8ed;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.project-language {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #53a1ee; 
+  margin-top: auto;
+}
+

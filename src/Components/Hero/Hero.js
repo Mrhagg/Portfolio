@@ -1,11 +1,15 @@
 import './Hero.css';
 import { useState } from 'react';
+import WilliamPic from '../../images/williamhaggpic.jpg'
 
 function Hero() {
   const [activeBtn, setActiveBtn] = useState(null);
    return (
     <section className="hero">
       <div className="hero-content">
+        <div className="img-container">
+          <img className="img-logo" src={WilliamPic}></img>
+        </div>
         <h1>Hello, I'm William</h1>
         <h2>.NET Fullstack Developer</h2>
         <p>

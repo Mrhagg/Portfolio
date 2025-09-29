@@ -85,7 +85,6 @@ function Contact () {
               
             </li>
           </ul>
-          <img className="img-logo" src={WilliamPic}></img>
         </section>
 
        
