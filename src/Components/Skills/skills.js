@@ -3,7 +3,6 @@ import JsLogo from '../../images/Js.png';
 import NetLogo from '../../images/net logo.png'
 import SqlLogo from '../../images/SQL.png';
 import UmbracoLogo from '../../images/Umbraco.webp';
-import { text } from '@fortawesome/fontawesome-svg-core';
 
 const skills = [
   {id: 1, text: 'During my education and spare time i been experimenting with Javascript, mainly react with typescript to get a better understanding and knowledge with the Javascript syntax.', image: JsLogo},
@@ -12,7 +11,11 @@ const skills = [
   {id: 4, text: 'When it comes to CMS development i been using Umbraco, i found it very easy to use and smooth to implement your solutions.' ,image: UmbracoLogo},
 ];
 
+
+
 function Skills() {
+
+  
   return (
     <section className="main-container">
       <div className="main-content">

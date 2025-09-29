@@ -1,51 +1,65 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 import './navbar.css'
+
+
 
 function Navbar() {
   const [active, setActive] = useState('#home');
+  
 
   return (
     <nav className="navbar">
 
-      <a
-        href="#home"
+      <Link
+        to="home"
+        smooth={true}
+        duration={500}
+        spy={true}
+        offset={-70}
         className={active === '#home' ? 'active' : ''}
         onClick={() => setActive('#home')}
       >
         Home
-      </a>
+      </Link>
 
-      <a
-        href="#skills"
+      <Link
+        to="skills"
+        smooth={true}
+        duration={500}
+        spy={true}
+        offset={-70}
         className={active === '#skills' ? 'active' : ''}
         onClick={() => setActive('#skills')}
       >
         Skills
-      </a>
+      </Link>
 
-      <a
-        href="#courses"
-        className={active === '#courses' ? 'active' : ''}
-        onClick={() => setActive('#courses')}
-      >
-        Courses
-      </a>
-
-      <a
-        href="#projects"
+      
+      <Link
+        to="projects"
+        smooth={true}
+        duration={500}
+        spy={true}
+        offset={-70}
         className={active === '#projects' ? 'active' : ''}
         onClick={() => setActive('#projects')}
       >
         Projects
-      </a>
+      </Link>
 
-      <a
-        href="#contact"
+      <Link
+        to="contact"
+
+        smooth={true}
+        duration={500}
+        spy={true}
+        offset={-70}
         className={active === '#contact' ? 'active' : ''}
         onClick={() => setActive('#contact')}
       >
         Contact
-      </a>
+      </Link>
     </nav>
   );
 }

@@ -1,6 +1,6 @@
 import './Header.css'
 import Navbar from '../navbar/navbar';
-
+import { Link } from 'react-scroll';
 
 function Header() {
   return (
