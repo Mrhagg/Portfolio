@@ -25,12 +25,30 @@
 
   display: inline-block;     
   white-space: nowrap;       
-  overflow: hidden;          
+  overflow: hidden;       
+  margin-top: 2rem;   
   
 
   text-align: center;        
   animation: typing 2s steps(21, end) forwards,
              blink 0.75s step-end forwards;
+}
+
+@media (max-width: 423px) {
+  .headline-text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 35px;
+
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+
+    text-align: start;
+    
+    animation: typing 2s steps(21, end) forwards,
+                          blink 0.75s step-end forwards;
+  }
 }
 
 @keyframes typing {

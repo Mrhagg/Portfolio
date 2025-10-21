@@ -64,6 +64,7 @@ function Contact () {
         
         <section className="contact-ways">
           <h2>Other ways to reach out</h2>
+          
           <ul>
             <li>
               <i className="fa-solid fa-envelope"></i> 
@@ -106,7 +107,7 @@ function Contact () {
             <textarea className={errors.message ? "input-error" : "input-valid"} value={message} onChange={(e) => setMessage(e.target.value)} rows={5} />
             {errors.message && <div className="error">{errors.message}</div>}
           </div>
-          <button type="submit">Send</button>
+          <button className="form-btn" type="submit">Send</button>
         </form>
       </div>
     </section>

@@ -1,15 +1,27 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { Menu,X } from "lucide-react";
 import './navbar.css'
 
 
 
 function Navbar() {
   const [active, setActive] = useState('#home');
+  const [isOpen, setIsOpen] = useState(false);
   
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  }
+
 
   return (
-    <nav className="navbar">
+    <header>
+      <button className="menu-toggle" onClick={handleToggle}>
+        {isOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
+    <nav className={`navbar ${isOpen ? "open" : ""}`}>
+         
+        
 
       <Link
         to="home"
@@ -60,7 +72,8 @@ function Navbar() {
       >
         Contact
       </Link>
-    </nav>
+      </nav>
+    </header>
   );
 }
 

@@ -6,7 +6,7 @@
   font-size: 50px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
-  color: #c06c84;
+  color: #e3698c;
 }
 
 .project-information {
@@ -14,8 +14,10 @@
   font-size: 30px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
-  color: #c06c84;
+  color: #ffffff;
+  text-align: center;
 }
+
 
 .projects-container {
   display: grid;
@@ -39,14 +41,14 @@
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  color: rgb(225, 227, 228);
+  color: rgb(166, 168, 169);
 }
 
 .project-title {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #c06c84;
+  color: #ffffff;
 }
 
 .project-title a {

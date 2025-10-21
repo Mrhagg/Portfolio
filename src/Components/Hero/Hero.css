@@ -8,36 +8,53 @@
   padding: 2rem;
 }
 
+
 .hero-content {
   max-width: 800px;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
 
 .hero h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #f67280;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   line-height: 1.6;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+.hero-buttons .hero-btn {
+  background: transparent;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #f67280;
+  color: #f67280;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin: 2rem;
 }
 
-.btn {
-  color: white;
-  padding: 0.75rem 1.5rem;
+.hero-buttons .hero-btn:hover {
+  background: #c06c84;
+  color: #FFFFFF;
+}
+
+.hero-buttons .hero-btn-secondary {
+  background: transparent;
+  padding: 0.75rem 1rem;
   border-radius: 8px;
   border: 2px solid #f67280;
   color: #f67280;
@@ -46,25 +63,16 @@
   transition: background 0.3s;
 }
 
-.btn:hover {
-  background: #c06c84;
-  color: #FFFFFF;
-}
-
-.btn.secondary {
-  background: transparent;
-  border: 2px solid #f67280;
-  color: #f67280;
-}
-
-.btn.secondary:hover {
+.hero-buttons .hero-btn-secondary:hover {
   background: #f67280;
   color: white;
 }
 
-
-.btn.active {
+.hero-buttons .hero-btn.active,
+.hero-buttons .hero-btn-secondary.active {
   background: #c06c84;
   border-color: #c06c84;
   color: white;
 }
+
+
