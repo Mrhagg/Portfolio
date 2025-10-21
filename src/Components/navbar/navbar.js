@@ -19,10 +19,8 @@ function Navbar() {
       <button className="menu-toggle" onClick={handleToggle}>
         {isOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
-    <nav className={`navbar ${isOpen ? "open" : ""}`}>
+    <nav className={`my-navbar ${isOpen ? "open" : ""}`}>
          
-        
-
       <Link
         to="home"
         smooth={true}
