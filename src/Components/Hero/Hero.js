@@ -1,6 +1,9 @@
 import './Hero.css';
 import { useState } from 'react';
 import WilliamPic from '../../images/williamhaggpic.jpg'
+import DownloadPDF from '../../DownloadPDF';
+
+
 
 function Hero() {
   const [activeBtn, setActiveBtn] = useState(null);
@@ -13,24 +16,17 @@ function Hero() {
         <h1>Hello, I'm William</h1>
         <h2>Junior .NET Developer</h2>
         <p>
-          I build modern and scalable web applications using <strong>C#</strong>, <strong>ASP.NET Core</strong>, 
-          and <strong>React</strong>. Passionate about creating user-friendly solutions 
-          that make a real impact.
+          I'm a junior web developer who builds modern and scalable web applications using <strong>C#</strong>, <strong>ASP.NET Core</strong>, 
+          and <strong>JavaScript</strong>. Passionate about creating user-friendly solutions 
+          that make a real impact. On my spare time i like to get creative with different kinds of coding projects or spend the time with my girlfriend and our dog.
         </p>
-       <div className="hero-buttons">
-          <a
-            href="#projects"
-            className={`hero-btn ${activeBtn === '#projects' ? 'active' : ''}`}
-            onClick={() => setActiveBtn('#projects')}
-          >View My Projects
-          </a>
-          <a
-            href="#contact"
-            className={`hero-btn-secondary ${activeBtn === '#contact' ? 'active' : ''}`}
-            onClick={() => setActiveBtn('#contact')}
-          > Get In Touch
-          </a>
+        <div className="cert">
+            <div className="download-link">
+              <h4>If you are interested in my work and want to know more about me, <strong>Click here to download my CV</strong></h4>
+              <a className="btn btn-success" href="CV.pdf" download="CV.pdf">Download</a>
+            </div>
         </div>
+       
       </div>
       <div className="about-section">
       </div>

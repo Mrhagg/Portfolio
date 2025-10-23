@@ -24,7 +24,7 @@ function Navbar() {
       <Link
         to="home"
         smooth={true}
-        duration={500}
+        duration={100}
         spy={true}
         offset={-70}
         className={active === '#home' ? 'active' : ''}
@@ -36,7 +36,7 @@ function Navbar() {
       <Link
         to="skills"
         smooth={true}
-        duration={500}
+        duration={100}
         spy={true}
         offset={-70}
         className={active === '#skills' ? 'active' : ''}
@@ -49,7 +49,7 @@ function Navbar() {
       <Link
         to="projects"
         smooth={true}
-        duration={500}
+        duration={100}
         spy={true}
         offset={-70}
         className={active === '#projects' ? 'active' : ''}
@@ -62,7 +62,7 @@ function Navbar() {
         to="contact"
 
         smooth={true}
-        duration={500}
+        duration={100}
         spy={true}
         offset={-70}
         className={active === '#contact' ? 'active' : ''}

@@ -26,30 +26,12 @@
   display: inline-block;     
   white-space: nowrap;       
   overflow: hidden;       
-  margin-top: 2rem;   
-  
-
+     
   text-align: center;        
   animation: typing 2s steps(21, end) forwards,
              blink 0.75s step-end forwards;
 }
 
-@media (max-width: 423px) {
-  .headline-text {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    font-size: 35px;
-
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-
-    text-align: start;
-    
-    animation: typing 2s steps(21, end) forwards,
-                          blink 0.75s step-end forwards;
-  }
-}
 
 @keyframes typing {
   0% { width: 0; opacity: 0; }
@@ -69,4 +51,31 @@ a {
   font-weight: bold;
   font-size: 20px;
   
+}
+
+@media (max-width: 423px) {
+  .App-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+  }
+}
+
+@media (max-width: 423px) {
+  .headline-text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    display: inline-block;
+    white-space: nowrap;
+    flex-shrink: 1;
+    max-width: 70%;
+    overflow: hidden;
+    text-align: center;
+    animation: typing 2s steps(19, end) forwards,
+                          blink 0.75s step-end forwards;
+  }
 }
