@@ -1,4 +1,58 @@
-.about-page{
-  min-height: 100vh;
-  width: 100%;
+
+.About-page {
+    background: linear-gradient(30deg, #7e7e8f, #32324e);
+    border-radius: 12px;       
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    padding: 30px;             
+    margin: 50px auto;        
+    max-width: 800px;          
+    width: 90%;                
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+
+.About-title h1 {
+    font-size: 2.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #e3698c; 
+    border-bottom: 2px solid #aba7a7; 
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.About-name h2 {
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #e3698c;
+    font-weight: 400; 
+}
+
+.About-main p {
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+    color: #FFFFFF;
+    text-align: justify; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+.btn {
+  background-color: #e3698c;
+  outline: none;
+}
+
+
+@media (max-width: 600px) {
+    .About-page {
+        padding: 20px; 
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+    .About-title h1 {
+        font-size: 1.8em;
+    }
 }
