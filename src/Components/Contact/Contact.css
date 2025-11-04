@@ -1,14 +1,40 @@
+@media (min-width: 423px) {
+  
+  .contact-body {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .contact-ways {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 0;
+  }
+  
+  .contact-form-right {
+    flex: 2;
+    min-width: 300px;
+    margin-left: 0;
+  }
+}
+
+
 .contact-body {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: 50px;
+  gap: 0;
+  flex: 0 0 auto;
   flex-wrap: wrap; 
+  flex-direction: row;
 }
 
 .contact-ways {
   flex: 1;
   min-width: 200px;
+  margin-right: 0;
 }
 
 .contact-ways h2 {
@@ -68,12 +94,16 @@
 }
 
 .contact-form-right {
-  flex: 2;
+  flex: 1;
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  margin-left: 15rem;
+  margin-left: 0;
+  box-sizing: border-box;
+  padding: 1rem;
 }
+
+
 
 .contact-form {
   background: linear-gradient(30deg, #727282, #32324e);
@@ -85,6 +115,8 @@
   margin: 0 auto;
   margin-bottom: 5rem;
 }
+
+
 
 .input-title {
   margin-bottom: 10px;
