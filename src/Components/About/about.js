@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './about.css';
+import aboutLogo from '../../images/ai-image.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFile }  from '@fortawesome/free-solid-svg-icons' 
 
 const AboutMe = () => {
   const [data, setData] = useState(null);
@@ -30,7 +33,9 @@ const AboutMe = () => {
     <div className="About-page">
       <div className="About-title">
          <h1>{data.title}</h1>
+         <img className="about-logo" src={aboutLogo} />
       </div>
+      
       <div className="About-name">
          <h2>{data.name}</h2>
       </div>
@@ -39,7 +44,7 @@ const AboutMe = () => {
       </div>
       <div className="cert">
             <div className="download-link">
-              <a className="btn btn-danger" href="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf" download="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf">Download</a>
+              <a className="btn btn-danger" href="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf" download="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf">Download<FontAwesomeIcon icon={faFile} /></a>
             </div>
         </div>
       <div className="About-main">

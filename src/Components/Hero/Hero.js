@@ -1,12 +1,12 @@
 import './Hero.css';
-import { useState } from 'react';
 import WilliamPic from '../../images/williamhaggpic.jpg'
-import DownloadPDF from '../../DownloadPDF';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFile }  from '@fortawesome/free-solid-svg-icons' 
 
 
 function Hero() {
-  const [activeBtn, setActiveBtn] = useState(null);
+  
+
    return (
     <section className="hero">
       <div className="hero-content">
@@ -19,7 +19,7 @@ function Hero() {
         <div className="cert">
             <div className="download-link">
               <p>If you are interested in my work and want to know more about me, <strong>Click here to download my CV</strong></p>
-              <a className="btn btn-danger" href="CV.pdf" download="CV.pdf">Download</a>
+              <a className="btn btn-danger" href="CV.pdf" download="CV.pdf">Download<FontAwesomeIcon className="icon" icon={faFile} /></a>
             </div>
         </div>
        

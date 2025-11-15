@@ -14,18 +14,18 @@ function Contact () {
   
 
   if(!name.trim()) {
-    newErrors.name = "Du måste skriva in ett namn i fältet.";
+    newErrors.name = "You have to write your name.";
   } 
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if(!email.trim()) {
-    newErrors.email = "Du måste skriva in en emailadress."
+    newErrors.email = "You have to enter your email-adress"
   } else if (!emailRegex.test(email)) {
-    newErrors.email = "Ogiltig emailadress"
+    newErrors.email = "invalid email address."
   }
 
   if(!message.trim()) {
-    newErrors.message = "Du måste skriva ett meddelande."
+    newErrors.message = "You have to write a message before sending."
   }
 
   setErrors(newErrors);
@@ -38,7 +38,7 @@ function Contact () {
 
     if(validateForm()) {
       console.log({name, email, message});
-      alert("Formuläret skickades")
+      alert("Message was sent succesfully!")
       setName("");
       setEmail("");
       setMessage("");

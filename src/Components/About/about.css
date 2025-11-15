@@ -1,6 +1,6 @@
 
 .About-page {
-    background: linear-gradient(30deg, #7e7e8f, #32324e);
+    background: linear-gradient(130deg, #51515a, #13131b);
     border-radius: 12px;       
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
     padding: 30px;             
@@ -44,6 +44,24 @@
   background-color: #e3698c;
   outline: none;
 }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-logo {
+    animation: fadeIn 1s ease-in forwards;
+    width: 250px;
+    border-radius: 20px;
+    opacity: 0;
+}
+
 
 
 @media (max-width: 600px) {

@@ -106,7 +106,7 @@
 
 
 .contact-form {
-  background: linear-gradient(30deg, #727282, #32324e);
+  background: linear-gradient(30deg, #363637, #32324e);
   padding: 50px;
   border: 1px solid #979494;
   border-radius: 12px;
@@ -175,22 +175,19 @@ input {
 }
 
 
-
-
 .form-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
   font-size: 17px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   margin-top: 1rem;
-  border: 1px solid #555151;
+  border: 1px solid #915353;
   border-radius: 10px;
-  box-shadow: 1 2px #3f3f53;
-  background: linear-gradient(10deg, rgb(79, 73, 73), rgb(69, 68, 68) 30%, rgba(178, 49, 49, 0.991));
+  background: linear-gradient(10deg, rgb(235, 42, 42), rgb(69, 68, 68) 30%, rgba(222, 24, 24, 0.991));
   color: #FFFFFF;
 }
 
@@ -200,9 +197,3 @@ button:hover{
   transition: 0.3s ease-in-out;
 }
 
-.img-logo {
-  width: 200px;
-  border-radius: 10px;
-  border: 1px solid #6b6464;
-  box-shadow: 11px 10px 10px #6f6f76;
-}

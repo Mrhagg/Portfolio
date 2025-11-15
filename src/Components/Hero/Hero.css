@@ -10,6 +10,10 @@
 
 .img-logo {
   margin-top: 4rem;
+  width: 300px;
+  border-radius: 70px;
+  border: 7px solid rgba(135, 115, 115, 0.37);
+  box-shadow: #FFFFFF 2px 2px 8px;
 }
 
 .hero-content {
@@ -84,6 +88,10 @@
   text-decoration: none;
   font-weight: 500;
   transition: 0.2s ease;
+}
+
+.icon {
+  margin-left: 5px;
 }
 
 
