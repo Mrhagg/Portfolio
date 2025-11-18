@@ -142,7 +142,7 @@ textarea {
  border-radius: 10px;
  font-family: 'Times New Roman', Times, serif;
  font-size: 17px;
- font-weight: bold;
+ font-weight: 500;
 }
 
 input {
@@ -151,6 +151,8 @@ input {
   border-radius: 5px;
   border: 1px solid red;
 }
+
+
 
 .error {
   color: #f44336;
@@ -187,8 +189,8 @@ input {
   margin-top: 1rem;
   border: 1px solid #915353;
   border-radius: 10px;
-  background: linear-gradient(10deg, rgb(235, 42, 42), rgb(69, 68, 68) 30%, rgba(222, 24, 24, 0.991));
-  color: #FFFFFF;
+  background: linear-gradient(10deg, rgb(37, 36, 36), rgb(216, 139, 139) 30%, rgba(60, 40, 40, 0.991));
+  color: #fcfbfb;
 }
 
 button:hover{
@@ -197,3 +199,20 @@ button:hover{
   transition: 0.3s ease-in-out;
 }
 
+.contact-alert-container {
+  position: absolute;
+  top: -2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 53%;
+  z-index: 1000;
+}
+
+.custom-alert {
+  transition: opacity 1.5s ease;
+  opacity: 1;
+}
+
+.custom-alert.hide  {
+  opacity: 0;
+}

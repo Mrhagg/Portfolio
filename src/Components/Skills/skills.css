@@ -1,5 +1,6 @@
 .main-container{
-  margin-top: 10rem;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
 }
 
 .main-info {
@@ -43,7 +44,7 @@
  padding-right: 10px;
  padding-bottom: 30px;
  padding-top: 30px;
- height: 350px;
+ height: 375px;
  background: linear-gradient(30deg, #515170, #1c1c28);
  position: relative;
  overflow: hidden;
@@ -88,9 +89,9 @@
 }
 
 .skill-name{
-  font-family:'Times New Roman', Times, serif;  
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;  
+  font-size: 15px;
+  font-weight: 500;
   color: #FFFFFF;
   text-align: start;
   margin-left: 1rem;

@@ -33,7 +33,7 @@ function Navbar() {
   return (
     <header>
       <button className="menu-toggle" onClick={handleToggle}>
-        {isOpen ? <X size={28} /> : <Menu size={28} />}
+        { isOpen ? <X size={28} /> : <Menu size={40} /> }
       </button>
     <nav className={`my-navbar ${isOpen ? "open" : ""}`}>
          

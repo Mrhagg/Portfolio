@@ -1,6 +1,9 @@
 import './Contact.css'
 import WilliamPic from '../../images/williamhaggpic.jpg'
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
+import Alert from 'react-bootstrap/Alert';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 function Contact () {
 
@@ -8,6 +11,7 @@ function Contact () {
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState({});
+  const [alert, setAlert] = useState({ show:false, variant: "", message: ""});
 
   const validateForm = () => {
     const newErrors = {};
@@ -37,12 +41,33 @@ function Contact () {
     e.preventDefault();
 
     if(validateForm()) {
-      console.log({name, email, message});
-      alert("Message was sent succesfully!")
+     emailjs.send(
+      "service_jdbbuda",
+      "template_ho9zp7u",
+      { 
+        name,
+        email,
+        message,
+      },
+      "vuOEawMot1C6VEoTR"
+     )
+     .then((response) => {
+      setAlert({ show: true, variant: "success", message: "Message was sent successfully!"});
       setName("");
       setEmail("");
       setMessage("");
-      setErrors("");
+
+      setTimeout(() =>  {
+        setAlert(prev => ({...prev, hide: true}));
+      setTimeout(() => {
+        setAlert({ show: false, variant: "", message: "", hide: false});
+      }, 500);
+      }, 3000);
+     })
+     .catch((error) => {
+      console.log("Error sending message", error);
+      setAlert({ show: true, variant: "danger", message: "Something went wrong, please try again!"});
+     })
     }
   };
 
@@ -87,6 +112,20 @@ function Contact () {
             </li>
           </ul>
         </section>
+
+        <div className="contact-alert-container">
+            {alert.show && (
+              <Alert 
+                variant={alert.variant} 
+                dismissible
+                onClose={() => setAlert({ ...alert, show: false })}
+                className={`custom-alert fade show ${alert.hide ? 'hide' : ''}`}
+              >
+                {alert.message}
+              </Alert>
+            )}
+          </div>
+        
 
        
         <form className="contact-form-right" onSubmit={handleSubmit}>

@@ -32,7 +32,6 @@ header {
   gap: 2rem;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 
@@ -45,29 +44,42 @@ header {
   }
 
   .my-navbar {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 30px;
-    left: 10px;
-    z-index: 1000;
-    background: rgba(28, 28, 40, 0.95);
-    border-radius: 10px;
-    padding: 1rem 2rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    animation: slideDown 0.3s ease forwards;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 2000; 
+}
 
-  
-  .my-navbar.open {
-    display: flex;
-  }
+.my-navbar.open {
+  transform: translateY(0);
+}
 
-  .my-navbar a {
-    padding: 0.5rem 0;
-    font-size: 1.1rem;
-    text-align: center;
-  }
+.my-navbar a {
+  color: white;
+  font-size: 2rem;
+  margin: 20px 0;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 14px;
+  right: 50px;
+  z-index: 2100; 
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 
   @keyframes slideDown {
     from {
