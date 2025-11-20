@@ -11,6 +11,7 @@
         <li>React JavaScript</li>
         <li>Bootstrap CSS</li>
         <li>ASP.NET CORE Webb API (For the About page information)</li>
+        <li>TypeScript on the server side</li>
     </ul>
   </h3>
   <h1>TODO</h1>
