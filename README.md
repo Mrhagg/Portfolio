@@ -13,4 +13,12 @@
         <li>ASP.NET CORE Webb API (For the About page information)</li>
     </ul>
   </h3>
+  <h1>TODO</h1>
+  <ul>
+    <li>
+      <p>Need to fix with my media queries for the responsive design when it comes to tablets and display duo to it not working correctly atm.</p>
+      <p>Replace EmailJS for the contact page. I been using EmailJS beacuse i wanted to test out if it sent email succesfully from the contact form to my Email - Adress.</p>
+      <p>Implementation of a Node.Js Backend for my projects page. For the moment i'm fetching my projects from Githubs API, but instead of calling the API from the client i instead tend to wanna cach it to make the response time faster and also make it more protected with certain access tokens.</p>
+    </li>
+  </ul>
 </div>
