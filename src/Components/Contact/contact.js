@@ -1,9 +1,7 @@
 import './Contact.css'
-import WilliamPic from '../../images/williamhaggpic.jpg'
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import Alert from 'react-bootstrap/Alert';
-import { faL } from '@fortawesome/free-solid-svg-icons';
 
 function Contact () {
 
