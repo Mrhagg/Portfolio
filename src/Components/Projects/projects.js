@@ -1,11 +1,7 @@
 import './projects.css';
 import { useEffect, useState } from 'react';
 
-export default function Projects() {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  
-  const allowedRepos = [
+const allowedRepos = [
     "Portfolio",
     "BlazorGraduateAssignment",
     "UmbracoCMS",
@@ -14,6 +10,12 @@ export default function Projects() {
     "ASP-Assignment",
     "WebbApi-assignment"
   ];
+
+export default function Projects() {
+  const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  
 
   const languageColors = {
     "JavaScript": "#f1e05a",
@@ -39,7 +41,7 @@ export default function Projects() {
         console.error("Error fetching repos:", error);
         setLoading(false);
       });
-  }, [allowedRepos]);
+  }, []);
 
   if (loading) return <p>Loading...</p>;
 
