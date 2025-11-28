@@ -26,7 +26,7 @@ export default function Projects() {
   };
 
   useEffect(() => {
-    fetch("https://api.github.com/users/Mrhagg/repos?sort=updated")
+    fetch("http://localhost:4000/projects")
       .then((response) => response.json())
       .then((data) => {
         const filtered = data.filter((repo) =>
@@ -52,9 +52,9 @@ export default function Projects() {
          
           const color = languageColors[repo.language] || languageColors["Unknown"];
           return (
-            <div key={repo.id} className="project-card">
+            <div key={repo.name} className="project-card">
               <h2 className="project-title">
-                <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                <a href={repo.url} target="_blank" rel="noopener noreferrer">
                   {repo.name}
                 </a>
               </h2>
