@@ -39,7 +39,7 @@ export default function Projects() {
         console.error("Error fetching repos:", error);
         setLoading(false);
       });
-  }, []);
+  }, [allowedRepos]);
 
   if (loading) return <p>Loading...</p>;
 

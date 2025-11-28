@@ -3,7 +3,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/footer/footer';
 import Home from './Home';
 import About from './About';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 
 function App() {
  

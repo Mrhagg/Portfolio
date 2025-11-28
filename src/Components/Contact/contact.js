@@ -97,9 +97,10 @@ function Contact () {
             </li>
             <li>
               <i className="fa-brands fa-linkedin"></i>
-              <a href="https://www.linkedin.com/in/william-h%C3%A4gg-b2a524269/" target="_blank">
-              LinkedIn
-              </a>
+             <a href="https://www.linkedin.com/in/william-h%C3%A4gg-b2a524269/" target="_blank" rel="noreferrer">
+                  LinkedIn
+             </a>
+
             </li>
             <li>
               <a href="https://github.com/Mrhagg">
