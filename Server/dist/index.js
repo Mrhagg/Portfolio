@@ -9,8 +9,11 @@ const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)({
+    origin: ["http://localhost:3000/", "https://portfolio-williamhagg.netlify.app"]
+}));
 app.use(express_1.default.json());
+const PORT = process.env.PORT || 4000;
 app.get("/projects", async (req, res) => {
     try {
         const response = await axios_1.default.get("https://api.github.com/users/Mrhagg/repos?sort=updated", {
@@ -41,7 +44,7 @@ app.get("/projects", async (req, res) => {
         res.status(500).json({ error: "Failed to fetch repos" });
     }
 });
-app.listen(4000, () => {
+app.listen(PORT, () => {
     console.log("Server is running on http://localhost:4000");
 });
 //# sourceMappingURL=index.js.map

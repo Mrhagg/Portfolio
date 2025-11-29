@@ -6,12 +6,16 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
+
+
 app.use(cors( {
-  origin: ["http://localhost:3000/", "https://portfolio-williamhagg.netlify.app"]
+  origin: ["http://localhost:3000", "https://portfolio-williamhagg.netlify.app"]
 }));
 app.use(express.json());
 
 const PORT = process.env.PORT || 4000;
+
+
 
 app.get("/projects", async (req, res) => {
   try {
@@ -49,6 +53,8 @@ app.get("/projects", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch repos" });
   }
 });
+
+
 
 app.listen(PORT, () => {
   console.log("Server is running on http://localhost:4000");
