@@ -7,9 +7,10 @@ import { faFile }  from '@fortawesome/free-solid-svg-icons';
 const AboutMe = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const BACKEND_URL = "https://portfolio-williamhagg.onrender.com"
 
   useEffect(() => {
-    fetch("http://localhost:4000/about")
+    fetch(`${BACKEND_URL}/about`)
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();

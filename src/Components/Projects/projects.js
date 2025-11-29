@@ -27,8 +27,10 @@ export default function Projects() {
     "Unknown": "#6c757d"
   };
 
+  const BACKEND_URL = "https://portfolio-williamhagg.onrender.com"
+
   useEffect(() => {
-    fetch("http://localhost:4000/projects")
+    fetch(`${BACKEND_URL}/projects`)
       .then((response) => response.json())
       .then((data) => {
         const filtered = data.filter((repo) =>
