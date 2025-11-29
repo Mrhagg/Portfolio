@@ -37,10 +37,20 @@ header {
 
 @media (max-width: 423px) {
   .menu-toggle {
-    display: block; 
-    z-index: 1100;
+    display: block;
+    position: fixed;   
+    top: 14px;
+    right: 30px;
+    z-index: 2100;
     color: #f67280;
     flex-shrink: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-toggle::after {
+    display: none;
   }
 
   .my-navbar {
@@ -70,15 +80,7 @@ header {
   text-decoration: none;
 }
 
-.menu-toggle {
-  position: fixed;
-  top: 14px;
-  right: 50px;
-  z-index: 2100; 
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+
 
 
   @keyframes slideDown {

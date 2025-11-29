@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink, useLocation} from "react-router-dom"
 import { Menu,X } from "lucide-react";
@@ -9,7 +9,6 @@ import './navbar.css'
 function Navbar() {
   const [active, setActive] = useState('#home');
   const [isOpen, setIsOpen] = useState(false);
-
   const location = useLocation();
   const isHome = location.pathname === '/';
 
@@ -23,13 +22,11 @@ function Navbar() {
     }
   }
 
-
-  
   const handleToggle = () => {
     setIsOpen(!isOpen);
   }
 
-
+ 
   return (
     <header>
       <button className="menu-toggle" onClick={handleToggle}>
@@ -53,7 +50,7 @@ function Navbar() {
           spy={true}
           offset={-70}
           className={active === '#skills' ? 'active' : ''}
-          onClick={() => setActive('#skills')}
+          onClick={() => setActive('#skills') ?? setIsOpen(false)}
         >
           Skills
         </ScrollLink>
@@ -66,7 +63,7 @@ function Navbar() {
           spy={true}
           offset={-70}
           className={active === '#projects' ? 'active' : ''}
-          onClick={() => setActive('#projects')}
+          onClick={() => setActive('#projects') ?? setIsOpen(false)}
         >
           Projects
         </ScrollLink>
@@ -79,7 +76,7 @@ function Navbar() {
           spy={true}
           offset={-70}
           className={active === '#contact' ? 'active' : ''}
-          onClick={() => setActive('#contact')}
+          onClick={() => setActive('#contact') ?? setIsOpen(false)}
         >
           Contact
         </ScrollLink>
@@ -89,7 +86,7 @@ function Navbar() {
       <RouterLink
         to="about"
         className={window.location.pathname === '/about' ? 'active' : ''}
-        onClick={() => setIsOpen(false)}
+        onClick={() => setIsOpen(false) }
         > About
       </RouterLink>
       </nav>

@@ -3,11 +3,11 @@ import './about.css';
 import aboutLogo from '../../images/ai-image.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile }  from '@fortawesome/free-solid-svg-icons';
+import { BACKEND_URL } from '../../config'; 
 
 const AboutMe = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const BACKEND_URL = "https://portfolio-williamhagg.onrender.com"
 
   useEffect(() => {
     fetch(`${BACKEND_URL}/about`)

@@ -1,0 +1,1 @@
+export const BACKEND_URL = process.env.NODE_ENV === "production" ? "https://portfolio-williamhagg.onrender.com" : "http://localhost:4000";

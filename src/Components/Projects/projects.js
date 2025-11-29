@@ -1,5 +1,6 @@
 import './projects.css';
 import { useEffect, useState } from 'react';
+import { BACKEND_URL } from '../../config'; 
 
 const allowedRepos = [
     "Portfolio",
@@ -27,7 +28,6 @@ export default function Projects() {
     "Unknown": "#6c757d"
   };
 
-  const BACKEND_URL = "https://portfolio-williamhagg.onrender.com"
 
   useEffect(() => {
     fetch(`${BACKEND_URL}/projects`)

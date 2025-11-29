@@ -91,9 +91,12 @@ function Contact () {
           <ul>
             <li>
               <i className="fa-solid fa-envelope"></i> 
-              <a href="mailto:william.hagg1998@outlook.com?subject=Hej&body=Jag vill kontakta dig">
-                william.hagg1998@outlook.com
-              </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=william.haegg@gmail.com&su=Hej&body=Jag vill kontakta dig"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  > william.haegg@gmail.com
+                </a>
+
             </li>
             <li>
               <i className="fa-brands fa-linkedin"></i>
