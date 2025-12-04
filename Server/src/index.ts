@@ -46,11 +46,11 @@ app.get("/projects", async (req, res) => {
   app.get("/about", (req, res) => {
     
       const aboutMeData = {
-        Name: "William Hägg",
-        Title: "Junior Fullstack Developer",
-        ShortBio: "A Fullstack Developer primarily focused on .NET and C# development. I like to work with modern front-end frameworks like React, Blazor, and Next.js to build innovative, robust, and impactful software. I completed my two-year web development program (focused on .NET) in June 2025. (Feel free to download my graduation certificate below.)",
-        Description: "I'm William Hägg, 27, a dedicated developer with a genuine passion for building scalable and responsive websites. I live in Helsingborg, Sweden, with my girlfriend and our dog. I am a very grounded person who values living in the present and prioritizing my physical and mental health, which helps me maintain focus and operate effectively in my day-to-day life. In my spare time, I enjoy getting creative with personal coding projects or spending time at the gym."
-      };
+        Name: "William Hägg",
+        Title: "Junior Fullstack Developer",
+        ShortBio: "A Fullstack Developer primarily focused on .NET and C# development. I enjoy working with modern front-end frameworks like React, and .NET frameworks preferably Blazor to build innovative, robust, and impactful software. I completed my two-year web development program (focused on .NET) in June 2025. (Feel free to download my graduation certificate below.)",
+        Description: "I'm William Hägg, 27, a dedicated developer with a genuine passion for building scalable and responsive websites. I live in Helsingborg, Sweden, with my girlfriend and our dog. I am a very grounded person who values living in the present and prioritizing my physical and mental health, which helps me maintain focus and operate effectively in my day-to-day life. In my spare time, I enjoy getting creative with personal coding projects or spending time at the gym."
+      };
     res.json(aboutMeData);
   });
 

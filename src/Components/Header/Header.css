@@ -22,11 +22,9 @@
   font-weight: bold;
   font-size: 56px;
   color: #FFFFFF;
-
   display: inline-block;     
   white-space: nowrap;       
   overflow: hidden;       
-     
   text-align: center;        
   animation: typing 2s steps(21, end) forwards,
              blink 0.75s step-end forwards;
@@ -68,7 +66,8 @@ a {
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 30px;
-    margin-left: 20px;
+    margin-left: 15px;
+    margin-right: 1rem;
     display: inline-block;
     white-space: nowrap;
     flex-shrink: 1;

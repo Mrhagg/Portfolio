@@ -18,6 +18,10 @@
     min-width: 300px;
     margin-left: 0;
   }
+
+  .form-text {
+    width: 420px;
+  }
 }
 
 
@@ -172,7 +176,7 @@ input {
 }
 
 .input-valid {
-  border: 2px solid green;
+  border: 2px solid #423f3f;
   color: green;
 }
 
@@ -187,15 +191,15 @@ input {
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   margin-top: 1rem;
-  border: 1px solid #915353;
+  border: 1px solid #e3dfdf;
   border-radius: 10px;
-  background: linear-gradient(10deg, rgb(37, 36, 36), rgb(216, 139, 139) 30%, rgba(60, 40, 40, 0.991));
+  background: linear-gradient(10deg, rgb(37, 36, 36), rgb(48, 48, 48) 30%, rgba(60, 58, 58, 0.991));
   color: #fcfbfb;
 }
 
 button:hover{
   cursor: pointer;
-  color: #3a373778;
+  color: #99949478;
   transition: 0.3s ease-in-out;
 }
 

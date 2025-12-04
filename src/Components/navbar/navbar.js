@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { Link as RouterLink, useLocation} from "react-router-dom"
+import { scroller } from "react-scroll";
+import { Link as RouterLink, useLocation, useNavigate} from "react-router-dom"
 import { Menu,X } from "lucide-react";
 import './navbar.css'
 
@@ -11,14 +12,19 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const navigate = useNavigate();
 
-  const handleHomeClick = () => {
+
+  const handleHomeClick = (e) => {
+    e.preventDefault();
     setIsOpen(false);
+
     if (isHome) {
-      ScrollLink.scrollTo('hero', {smooth: true, duration: 100, offset: -70});
-      setActive('hero');
+      scroller.scrollTo('hero', {smooth: true, duration: 100, offset: -70});
+      setActive('#home');
     } else {
-      setActive('#hero')
+      navigate("/")
+      setActive('#home')
     }
   }
 
@@ -33,16 +39,32 @@ function Navbar() {
         { isOpen ? <X size={28} /> : <Menu size={40} /> }
       </button>
     <nav className={`my-navbar ${isOpen ? "open" : ""}`}>
-         
-      <RouterLink
-        to="/"
-        onClick={handleHomeClick}
-        className={location.pathname === '/' ? 'active' : ''}
-      > Home
-      </RouterLink>
+        
+    {isHome ? (
+        <ScrollLink
+          to="hero"
+          smooth={true}
+          duration={100}
+          offset={-100}
+          spy={true} 
+          onSetActive={() => setActive('hero')}
+          onSetInactive={() => setActive('')} 
+          onClick={() => setIsOpen(false)} 
+          className={active === 'hero' ? 'active' : ''} 
+        > Home
+        </ScrollLink>
+    ) : (
+        <RouterLink
+          to="/"
+          onClick={() => setIsOpen(false)}
+          className={location.pathname === '/' ? 'active' : ''} 
+        > Home
+        </RouterLink>
+    )}
 
     {isHome && (
       <>
+      
         <ScrollLink
           to="skills"
           smooth={true}
