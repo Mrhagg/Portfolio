@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { scroller } from "react-scroll";
-import { Link as RouterLink, useLocation, useNavigate} from "react-router-dom"
+import { Link as RouterLink, useLocation} from "react-router-dom"
 import { Menu,X } from "lucide-react";
 import './navbar.css'
 
@@ -12,7 +11,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const navigate = useNavigate();
+ 
 
 
   
