@@ -15,18 +15,7 @@ function Navbar() {
   const navigate = useNavigate();
 
 
-  const handleHomeClick = (e) => {
-    e.preventDefault();
-    setIsOpen(false);
-
-    if (isHome) {
-      scroller.scrollTo('hero', {smooth: true, duration: 100, offset: -70});
-      setActive('#home');
-    } else {
-      navigate("/")
-      setActive('#home')
-    }
-  }
+  
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
