@@ -25,8 +25,8 @@ const AboutMe = () => {
       });
   }, []);
 
-  if (loading) return <p>Loading..</p>;
-  if (!data) return <p>Could not fetch data..</p>;
+  if (loading) return <p className="fetch-data">Loading..</p>;
+  if (!data) return <p className="fail-data">Could not fetch data..</p>;
 
   return (
     <div className="About-page">
