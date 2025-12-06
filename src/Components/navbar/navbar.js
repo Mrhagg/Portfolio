@@ -22,7 +22,7 @@ function Navbar() {
 
  
   return (
-    <header>
+    <div className="navbar-wrapper">
       <button className="menu-toggle" onClick={handleToggle}>
         { isOpen ? <X size={28} /> : <Menu size={40} /> }
       </button>
@@ -100,7 +100,7 @@ function Navbar() {
         > About
       </RouterLink>
       </nav>
-    </header>
+    </div>
   );
 }
 

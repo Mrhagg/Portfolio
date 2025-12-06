@@ -38,11 +38,12 @@ header {
 @media (max-width: 423px) {
   .menu-toggle {
     display: block;
-    position: fixed;   
-    top: 14px;
-    right: 60px;
+    position: absolute;   
+    top: 40%;
+    right: 0px;
+    transform: translateY(-50%);
     z-index: 2100;
-    color: #f67280;
+    color: #FFFFFF;
     flex-shrink: 0;
     background: none;
     border: none;
