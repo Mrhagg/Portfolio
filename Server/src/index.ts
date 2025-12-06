@@ -33,14 +33,41 @@ app.get("/projects", async (req, res) => {
       url: repo.html_url,
       language: repo.language,
       updated: repo.updated_at,
+      owner: repo.owner.login
     }));
 
-    res.json(repos);
+    const reposWithLanguages = await Promise.all(
+      repos.map(async (repo: any) => {
+        try {
+          const langResponse = await axios.get(
+            `https://api.github.com/repos/${repo.owner}/${repo.name}/languages`,
+            {
+              headers: {
+                Authorization: `token ${process.env.GITHUB_TOKEN}`
+              }
+            }
+          );
+
+          const languagesArray = Object.keys(langResponse.data);
+
+          return { ...repo, languages: languagesArray };
+
+        } catch (error) {
+          console.error(`Failed to fetch languages for ${repo.name}`);
+          return { ...repo, languages: [] };
+        }
+      })
+    );
+
+    res.json(reposWithLanguages);
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Failed to fetch repos" });
   }
 });
+
+
 
     //--GET ABOUT--//
   app.get("/about", (req, res) => {
