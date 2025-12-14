@@ -74,7 +74,7 @@ export default function Projects() {
       });
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p className="fetch-projects">Loading...</p>;
 
   return (
     <section className="projects-section">

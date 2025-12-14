@@ -213,6 +213,7 @@ button:hover{
 
 .contact-alert-container {
   position: absolute;
+  border-radius: 20%;
   top: -2%;
   left: 50%;
   transform: translateX(-50%);

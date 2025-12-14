@@ -1,7 +1,8 @@
 import './Contact.css'
 import { useState } from 'react';
-import emailjs from 'emailjs-com';
 import Alert from 'react-bootstrap/Alert';
+
+const API_URL = process.env.NODE_ENV === "development" ? "http://localhost:4000" : "https://portfolio-williamhagg.onrender.com";
 
 function Contact () {
 
@@ -10,11 +11,11 @@ function Contact () {
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState({});
   const [alert, setAlert] = useState({ show:false, variant: "", message: ""});
+  const [isSending, setIsSending] = useState(false);
 
   const validateForm = () => {
     const newErrors = {};
   
-
   if(!name.trim()) {
     newErrors.name = "You have to write your name.";
   } 
@@ -35,39 +36,63 @@ function Contact () {
   return Object.keys(newErrors).length === 0;
 
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if(validateForm()) {
-     emailjs.send(
-      "service_jdbbuda",
-      "template_ho9zp7u",
-      { 
-        name,
-        email,
-        message,
-      },
-      "vuOEawMot1C6VEoTR"
-     )
-     .then((response) => {
-      setAlert({ show: true, variant: "success", message: "Message was sent successfully!"});
-      setName("");
-      setEmail("");
-      setMessage("");
+  if (!validateForm()) return;
 
-      setTimeout(() =>  {
-        setAlert(prev => ({...prev, hide: true}));
-      setTimeout(() => {
-        setAlert({ show: false, variant: "", message: "", hide: false});
-      }, 500);
-      }, 3000);
-     })
-     .catch((error) => {
-      console.log("Error sending message", error);
-      setAlert({ show: true, variant: "danger", message: "Something went wrong, please try again!"});
-     })
+  setIsSending(true);
+  setAlert({
+    show: true,
+    variant: "info",
+    message: "Sending message..."
+  });
+
+  try {
+    const response = await fetch(`${API_URL}/contact`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message
+        })
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to send message");
     }
-  };
+
+    setAlert({
+      show: true,
+      variant: "success",
+      message: "Message was sent successfully!"
+    });
+
+    setName("");
+    setEmail("");
+    setMessage("");
+
+    setTimeout(() => {
+      setAlert({ show: false, variant: "", message: "" });
+    }, 3000);
+
+  } catch (error) {
+    console.error("Error sending message", error);
+    setAlert({
+      show: true,
+      variant: "danger",
+      message: "Something went wrong, please try again!"
+    });
+  } finally {
+    setIsSending(false);
+  }
+};
+
 
   
 
@@ -148,7 +173,10 @@ function Contact () {
             <textarea className={errors.message ? "input-error" : "input-valid"} value={message} onChange={(e) => setMessage(e.target.value)} rows={5} />
             {errors.message && <div className="error">{errors.message}</div>}
           </div>
-          <button className="form-btn" type="submit">Send</button>
+          <button className="form-btn" type="submit" disabled={isSending}>
+            {isSending ? "Sending..." : "Send"}
+          </button>
+
         </form>
       </div>
     </section>
