@@ -105,7 +105,18 @@ function Contact () {
           </div>
       </section>
 
-      
+      <div className="contact-alert-container">
+            {alert.show && (
+              <Alert 
+                variant={alert.variant} 
+                dismissible
+                onClose={() => setAlert({ ...alert, show: false })}
+                className={`custom-alert fade show ${alert.hide ? 'hide' : ''}`}
+              >
+                {alert.message}
+              </Alert>
+            )}
+          </div>
 
     <section className="contact-form">
       <div className="contact-body">
@@ -140,18 +151,7 @@ function Contact () {
           </ul>
         </section>
 
-        <div className="contact-alert-container">
-            {alert.show && (
-              <Alert 
-                variant={alert.variant} 
-                dismissible
-                onClose={() => setAlert({ ...alert, show: false })}
-                className={`custom-alert fade show ${alert.hide ? 'hide' : ''}`}
-              >
-                {alert.message}
-              </Alert>
-            )}
-          </div>
+        
         
 
        

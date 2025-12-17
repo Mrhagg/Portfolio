@@ -128,7 +128,7 @@
   color: #FFFFFF;
 }
 
-@media(min-width: 423px) {
+@media(max-width: 423px) {
   .projects-wrapper {
     padding: 0 10px;
   }

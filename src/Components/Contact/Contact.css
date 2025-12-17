@@ -30,7 +30,6 @@
   }
 }
 
-
 .contact-body {
   display: flex;
   justify-content: flex-start;
@@ -212,13 +211,25 @@ button:hover{
 }
 
 .contact-alert-container {
-  position: absolute;
-  border-radius: 20%;
-  top: -2%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 53%;
+  position: fixed;        
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: none;        
+  padding: 0;
+  margin: 0;
   z-index: 1000;
+}
+
+@media(min-width: 423px) {
+  .contact-alert-container {
+    position: absolute;
+    top: 61px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    max-width: 1000px;
+  }
 }
 
 .custom-alert {
@@ -231,6 +242,7 @@ button:hover{
   text-align: center;
   letter-spacing: 2px;
   backdrop-filter: blur(10px);
+  width: 100%;
 }
 
 .custom-alert.hide  {
@@ -240,12 +252,3 @@ button:hover{
 
 
 
-@media(min-width: 423px) {
-  .contact-alert-container {
-    position: absolute;
-    border-radius: 40%;
-    top: 16%;
-    width: 100%;
-    transform: translateX(-50%);
-  }
-}
