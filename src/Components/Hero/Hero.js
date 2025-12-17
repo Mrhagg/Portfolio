@@ -19,7 +19,7 @@ function Hero() {
         <div className="cert">
             <div className="download-link">
               <p>If you are interested in my work and want to know more about me, <strong>Click here to download my CV</strong></p>
-              <a className="btn btn-danger" href="CV-William Hägg-EN.pdf" download="CV-William Hägg-EN.pdf">Download<FontAwesomeIcon className="icon" icon={faFile} /></a>
+              <a className="btn btn-danger" href="CV-William Hägg-ENGLISH.pdf" download="CV-William Hägg-ENGLISH.pdf">Download<FontAwesomeIcon className="icon" icon={faFile} /></a>
             </div>
         </div>
        

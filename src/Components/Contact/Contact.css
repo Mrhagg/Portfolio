@@ -224,8 +224,28 @@ button:hover{
 .custom-alert {
   transition: opacity 1.5s ease;
   opacity: 1;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 700;
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+  letter-spacing: 2px;
+  backdrop-filter: blur(10px);
 }
 
 .custom-alert.hide  {
   opacity: 0;
+}
+
+
+
+
+@media(min-width: 423px) {
+  .contact-alert-container {
+    position: absolute;
+    border-radius: 40%;
+    top: 16%;
+    width: 100%;
+    transform: translateX(-50%);
+  }
 }

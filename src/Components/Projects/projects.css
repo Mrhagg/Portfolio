@@ -128,3 +128,36 @@
   color: #FFFFFF;
 }
 
+@media(min-width: 423px) {
+  .projects-wrapper {
+    padding: 0 10px;
+  }
+
+  .projects-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0;
+    scrollbar-width: none;
+  }
+
+  .project-card {
+    scroll-snap-align: center;
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding:1.5rem;
+    box-sizing: border-box;
+  }
+
+  .arrow {
+    background: #ffffff86;
+    width: 30px;
+    height: 30px;
+    margin-top: 2.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
