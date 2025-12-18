@@ -3,6 +3,7 @@ import axios from "axios";
 import cors from "cors";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import { apiHomePage } from "./views/apiHome";
 
 dotenv.config();
 
@@ -23,6 +24,13 @@ app.use(cors( {
 app.use(express.json());
 
 const PORT = process.env.PORT || 4000;
+
+
+//--API Home Page--//
+
+app.get("/", (req, res) => {
+  res.send(apiHomePage());
+});
 
 
 //--GET PROJECTS--//

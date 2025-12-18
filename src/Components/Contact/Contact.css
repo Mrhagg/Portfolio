@@ -224,7 +224,7 @@ button:hover{
 @media(min-width: 423px) {
   .contact-alert-container {
     position: absolute;
-    top: 61px;
+    top: 55px;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
