@@ -71,7 +71,7 @@ This setup allows the frontend and backend to be deployed independently, making 
 ## Author
 
 **William Hägg**  
-Frontend / Fullstack Developer  
+ Fullstack Developer  
 
 🌐 Portfolio: https://portfolio-williamhagg.netlify.app/
 
