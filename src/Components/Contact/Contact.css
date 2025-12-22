@@ -35,7 +35,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   flex-wrap: wrap; 
   flex-direction: row;
 }
@@ -99,7 +99,7 @@
   font-size: 43px;
   font-weight: bold;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .contact-form-right {
@@ -211,7 +211,7 @@ button:hover{
 }
 
 .contact-alert-container {
-  position: fixed;        
+  position: sticky;        
   top: 0;
   left: 0;
   width: 100%;

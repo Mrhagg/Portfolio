@@ -39,6 +39,13 @@
     font-size: 1.2em;
 }
 
+.current-text p {
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
 .btn {
   background-color: #e3698c;
   outline: none;

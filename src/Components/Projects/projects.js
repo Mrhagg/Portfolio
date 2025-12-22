@@ -5,7 +5,7 @@ import { BACKEND_URL } from '../../config';
 const allowedRepos = [
     "Portfolio",
     "BlazorGraduateAssignment",
-    "UmbracoCMS",
+    "FootyHub",
     "Js-frontend",
     "Js-backendGraphQl",
     "ASP-Assignment",

@@ -51,6 +51,9 @@ const AboutMe = () => {
       <div className="About-main">
         <p>{data.Description}</p>
       </div>
+      <div className="current-text">
+        <p>{data.CurrentWork}</p>
+      </div>
     </div>
   );
 };
