@@ -1,25 +1,96 @@
-<div>
-  <h1>My personal portfolio</h1>
-  <h2>Been working on my personal portfolio now for a while after i graduated from my education.</h2>
-  <h3>I have still a bit to do on this project but development is in the making of it.</h3>
-  <p>When i was gonna start build my portfolio i wanted to build it with React JavaScript duo to the lack of knowledge when it comes to JavaScript in general, so i wanted to get a bit better in the stack overall which made it easy to choose this framework to build with.I was keen on trying Tailwind CSS but since i been using bootstrap CSS the majority of my time programming i choose it in the end of all for the simplicty it brings with built in stylings for certain components.</p>
-</div>
-<div>
-  <h1>TECH STACK:</h1>
-  <h3>
-    <ul>
-        <li>React JavaScript</li>
-        <li>Bootstrap CSS</li>
-        <li>ASP.NET CORE Webb API (For the About page information)</li>
-        <li>TypeScript on the server side</li>
-    </ul>
-  </h3>
-  <h1>TODO</h1>
-  <ul>
-    <li>
-      <p>Need to fix with my media queries for the responsive design when it comes to tablets and display duo to it not working correctly atm.</p>
-      <p>Replace EmailJS for the contact page. I been using EmailJS beacuse i wanted to test out if it sent email succesfully from the contact form to my Email - Adress.</p>
-      <p>Implementation of a Node.Js Backend for my projects page. For the moment i'm fetching my projects from Githubs API, but instead of calling the API from the client i instead tend to wanna cach it to make the response time faster and also make it more protected with certain access tokens.</p>
-    </li>
-  </ul>
-</div>
+Personal Portfolio
+
+This is my personal portfolio website, built to showcase my projects, skills, and development journey after graduating from my education.
+The portfolio is continuously improved and serves as both a presentation platform and a learning project.
+
+🔗 Live Demo:
+https://portfolio-williamhagg.netlify.app/
+
+Purpose
+
+The main goal of this project was to:
+
+Improve my JavaScript and React skills
+
+Build and deploy a real-world fullstack application
+
+Strengthen my understanding of frontend–backend communication
+
+Gain hands-on experience with Node.js, TypeScript, and deployment workflows
+
+Tech Stack
+Client Side
+
+React
+
+Bootstrap CSS
+
+Bootstrap was chosen due to its simplicity and built-in components. Since I had prior experience with it, it allowed me to focus more on application logic and structure rather than styling complexity.
+
+Server Side
+
+Node.js
+
+TypeScript
+
+NodeMailer
+
+The backend is responsible for handling email functionality and serves as a scalable foundation for future features.
+
+Deployment
+
+The application is deployed using the following services:
+
+Frontend: Netlify
+
+Backend: Render
+
+This setup allows the frontend and backend to be deployed independently, making the application easier to maintain and scale. Environment variables are handled securely on the server side.
+
+Features
+
+Fully responsive design (desktop, tablet, and mobile)
+
+Contact form with email functionality using NodeMailer
+
+Projects page displaying my work
+
+Modular React components
+
+Clean and minimal UI
+
+Backend Overview
+
+The backend is built with Node.js and TypeScript and currently handles:
+
+Sending emails from the contact form via NodeMailer
+
+API logic used by the frontend
+
+Secure handling of environment variables
+
+Earlier in development, project data was fetched directly from GitHub’s API on the client side. The backend architecture now allows better performance, security, and flexibility for future improvements such as caching or database integration.
+
+What I Learned
+
+Building and structuring a fullstack application
+
+React component architecture and state handling
+
+Creating and deploying a Node.js backend
+
+Using NodeMailer for email handling
+
+Deploying applications to Netlify and Render
+
+Managing environment variables and production builds
+
+Future Improvements
+
+Add database or CMS for managing projects
+
+Improve animations and UI transitions
+
+Implement caching for API responses
+
+Better SEO and performance optimizations
