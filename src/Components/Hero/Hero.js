@@ -15,14 +15,6 @@ function Hero() {
         </div>
         <h1>Hello, I'm William</h1>
         <h2>Junior .NET Developer</h2>
-        
-        <div className="cert">
-            <div className="download-link">
-              <p>If you are interested in my work and want to know more about me, <strong>Click here to download my CV</strong></p>
-              <a className="btn btn-danger" href="CV-William-Hägg-EN.pdf" download="CV-William-Hägg-EN.pdf">Download<FontAwesomeIcon className="icon" icon={faFile} /></a>
-            </div>
-        </div>
-       
       </div>
       <div className="about-section">
       </div>

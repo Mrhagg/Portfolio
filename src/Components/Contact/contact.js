@@ -150,34 +150,46 @@ function Contact () {
             </li>
           </ul>
         </section>
-
-        
-        
-
        
-        <form className="contact-form-right" onSubmit={handleSubmit}>
+                {/* <form className="contact-form-right" onSubmit={handleSubmit}>
           <div className="name-text">
             <div className="input-title">Name</div>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} className={errors.name ? "input-error" : "input-valid"} />
+            <input 
+              type="text" 
+              value={name} 
+              onChange={(e) => setName(e.target.value)} 
+              className={errors.name ? "input-error" : "input-valid"} 
+            />
             {errors.name && <div className="error">{errors.name}</div>}
           </div>
 
           <div className="email-text">
             <div className="input-title">Email</div>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className={errors.email ? "input-error" : "input-valid"} />
+            <input 
+              type="email" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              className={errors.email ? "input-error" : "input-valid"} 
+            />
             {errors.email && <div className="error">{errors.email}</div>}
           </div>
 
           <div className="form-text">
             <div className="input-title">Message</div>
-            <textarea className={errors.message ? "input-error" : "input-valid"} value={message} onChange={(e) => setMessage(e.target.value)} rows={5} />
+            <textarea 
+              className={errors.message ? "input-error" : "input-valid"} 
+              value={message} 
+              onChange={(e) => setMessage(e.target.value)} 
+              rows={5} 
+            />
             {errors.message && <div className="error">{errors.message}</div>}
           </div>
+
           <button className="form-btn" type="submit" disabled={isSending}>
             {isSending ? "Sending..." : "Send"}
           </button>
-
-        </form>
+        </form> 
+        */}
       </div>
     </section>
 
