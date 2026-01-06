@@ -1,19 +1,18 @@
 import './Contact.css'
-import { useState } from 'react';
-import Alert from 'react-bootstrap/Alert';
 
-const API_URL = process.env.NODE_ENV === "development" ? "http://localhost:4000" : "https://portfolio-williamhagg.onrender.com";
+
+
 
 function Contact () {
 
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
-  const [email, setEmail] = useState("");
+  //const [name, setName] = useState("");
+  //const [message, setMessage] = useState("");
+  //const [email, setEmail] = useState("");
   //const [errors, setErrors] = useState({});
-  const [alert, setAlert] = useState({ show:false, variant: "", message: ""});
+  //const [alert, setAlert] = useState({ show:false, variant: "", message: ""});
   //const [isSending, setIsSending] = useState(false);
 
-  const validateForm = () => {
+  /*const validateForm = () => {
     const newErrors = {};
   
   if(!name.trim()) {
@@ -91,7 +90,7 @@ function Contact () {
   } finally {
     setIsSending(false);
   }
-};
+};*/
 
 
   
@@ -105,18 +104,7 @@ function Contact () {
           </div>
       </section>
 
-      <div className="contact-alert-container">
-            {alert.show && (
-              <Alert 
-                variant={alert.variant} 
-                dismissible
-                onClose={() => setAlert({ ...alert, show: false })}
-                className={`custom-alert fade show ${alert.hide ? 'hide' : ''}`}
-              >
-                {alert.message}
-              </Alert>
-            )}
-          </div>
+      
 
     <section className="contact-form">
       <div className="contact-body">
