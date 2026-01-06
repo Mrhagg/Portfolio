@@ -1,7 +1,6 @@
 import './Hero.css';
 import WilliamPic from '../../images/williamhaggpic.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFile }  from '@fortawesome/free-solid-svg-icons' 
+
 
 
 function Hero() {

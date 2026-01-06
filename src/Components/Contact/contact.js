@@ -9,9 +9,9 @@ function Contact () {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState({});
+  //const [errors, setErrors] = useState({});
   const [alert, setAlert] = useState({ show:false, variant: "", message: ""});
-  const [isSending, setIsSending] = useState(false);
+  //const [isSending, setIsSending] = useState(false);
 
   const validateForm = () => {
     const newErrors = {};
