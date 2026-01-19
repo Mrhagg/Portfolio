@@ -8,6 +8,10 @@ https://portfolio-williamhagg.netlify.app/
 
 ---
 
+##NOTICE 
+
+Email function with NodeMailer is not working at the moment duo to Renders free verision, it's not allowing sending Messages to my email duo to none subscription on Render.
+
 ## Purpose
 
 The main goal of this project was to:
