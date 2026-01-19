@@ -15,9 +15,7 @@ const allowedRepos = [
 export default function Projects() {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const sliderRef = useRef(null);
-
   const infiniteRepos = [...repos, ...repos];
   const scrollAmount = 350;
 
@@ -111,7 +109,16 @@ export default function Projects() {
                       );
                     })}
                   </div>
-
+                  <div className="project-actions">
+                    <a href={repo.url} target="_blank" rel="noopener noreferrer" className="btn-action btn-code">
+                      <i className="fa-brands fa-github"></i>View Code
+                    </a>
+                    {repo.homepage && (
+                      <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="btn-action btn-demo">
+                          <i className="fa-solid fa-rocket"></i> Live Demo
+                      </a>
+                    )}
+                  </div>
               </div>
             );
           })}

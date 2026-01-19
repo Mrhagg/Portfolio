@@ -5,7 +5,7 @@ const skillGroups = [
     id: 1,
     category: "Frontend",
     description: "I build responsive and interactive UIs with a focus on user experience and modern frameworks.",
-    technologies: ["React", "TypeScript", "Blazor", "JavaScript", "HTML5/CSS/SCSS", "Bootstrap", "Tailwind"]
+    technologies: ["HTML/CSS/SCSS","Blazor","React", "TypeScript", "JavaScript",  "Bootstrap", "Tailwind"]
   },
   {
     id: 2,

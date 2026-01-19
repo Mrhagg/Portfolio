@@ -221,6 +221,38 @@ button:hover{
   z-index: 1000;
 }
 
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.alert-info {
+  background-color: rgba(0, 123, 255, 0.1);
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.1);
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @media(min-width: 423px) {
   .contact-alert-container {
     position: absolute;
@@ -232,7 +264,7 @@ button:hover{
   }
 }
 
-.custom-alert {
+.alert {
   transition: opacity 1.5s ease;
   opacity: 1;
   font-size: 17px;
