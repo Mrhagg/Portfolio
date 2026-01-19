@@ -48,7 +48,12 @@
 
 .btn {
   background-color: #e3698c;
+  color: #040404;
   outline: none;
+}
+
+.btn:hover {
+    background-color: #51515a;
 }
 
 .fetch-data {
@@ -64,14 +69,21 @@
     gap: 1rem;
 }
 
+.btn-text {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
 .custom-dropdown .btn-primary {
-    background-color: #e3698c;
-    border-color: #51515a;
+    background-color: #71565f;
+    border-color: #7575b9;
 }
 
 .custom-dropdown .dropdown-menu {
-  background-color: #9da0a1;
+  background-color: #e9f3f6;
 }
+
 
 .custom-dropdown .dropdown-item{
     font-family: Arial, Helvetica, sans-serif;

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './about.css';
 import aboutLogo from '../../images/ai-image.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFile }  from '@fortawesome/free-solid-svg-icons';
 import { BACKEND_URL } from '../../config'; 
 import Dropdown from "react-bootstrap/Dropdown";
 
@@ -42,10 +40,13 @@ const AboutMe = () => {
       <div className="About-main">
         <p>{data.ShortBio}</p>
       </div>
+      <p className="btn-text">{data.Buttons}</p>
       <div className="cert">
+        
         <div className="download-link">
+          
           <a className="btn btn-danger" href="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf" download="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf">
-            Download Cert<FontAwesomeIcon icon={faFile} />
+            Download Certification
           </a>
         </div>
         <div className="download-link2">
@@ -54,8 +55,8 @@ const AboutMe = () => {
                 Choose Resume
               </Dropdown.Toggle>
             <Dropdown.Menu id="dropdown-menu">
-                <Dropdown.Item href="CV-William-Hägg-EN.pdf" download="CV-William-Hägg-EN.pdf">Resume-English</Dropdown.Item>
-                <Dropdown.Item href="CV-William-Hägg-SWE.pdf" download="CV-William-Hägg-SWE.pdf">Resume-Swedish</Dropdown.Item>
+                <Dropdown.Item href="William_Hägg_Cv_EN.pdf" download="William_Hägg_Cv_EN.pdf">Resume-English</Dropdown.Item>
+                <Dropdown.Item href="William_Hägg_Cv_SV.pdf" download="William_Hägg_Cv_SV.pdf">Resume-Swedish</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>

@@ -110,7 +110,7 @@ function Contact () {
       <div className="contact-body">
         
         <section className="contact-ways">
-          <h2>Other ways to reach out</h2>
+         
           
           <ul>
             <li>
