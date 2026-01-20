@@ -88,6 +88,7 @@ export default function Projects() {
     checkOverflow();
     window.addEventListener('resize', checkOverflow);
     return () => window.removeEventListener('resize', checkOverflow);
+    
   }, [repos]);
 
   if (loading) return <p className="fetch-projects">Loading...</p>;
