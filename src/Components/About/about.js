@@ -67,6 +67,9 @@ const AboutMe = () => {
       <div className="current-text">
         <p>{data.CurrentWork}</p>
       </div>
+      <div className="work-text">
+        <p>{data.OpenToWork}</p>
+      </div>
     </div>
   );
 };

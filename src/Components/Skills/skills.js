@@ -39,7 +39,9 @@ function Skills() {
         <p className="main-info">
           Over the course of my education and internship, I have developed a strong foundation in several key areas:
         </p>
-        
+        <div className="skills-title">
+          <h1>Technical Skills</h1>
+        </div>
         <div className="skills-grid">
           {skillGroups.map(group => (
             <div key={group.id} className="skill-item">

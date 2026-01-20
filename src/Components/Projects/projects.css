@@ -29,9 +29,12 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  flex-wrap: nowrap;
   overflow-x: hidden;
   scroll-behavior: smooth;
   padding-bottom: 2rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .projects-container::-webkit-scrollbar{

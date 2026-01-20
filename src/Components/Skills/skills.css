@@ -24,6 +24,17 @@
   color: #FFFFFF;
 }
 
+.skills-title h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f67280;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 50px;
+  
+}
+
 .skills-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 

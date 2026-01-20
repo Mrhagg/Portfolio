@@ -6,18 +6,29 @@ const allowedRepos = [
     "Portfolio",
     "BlazorGraduateAssignment",
     "FootyHub",
-    "Js-frontend",
-    "Js-backendGraphQl",
-    "ASP-Assignment",
-    "WebbApi-assignment"
   ];
 
 export default function Projects() {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   const sliderRef = useRef(null);
-  const infiniteRepos = [...repos, ...repos];
   const scrollAmount = 350;
+  const [showArrows, setShowArrows] = useState(false);
+
+  const infiniteRepos = showArrows ? [...repos, ...repos] : repos;
+
+ const checkOverflow = () => {
+  if (sliderRef.current) {
+    const isMobileView = window.innerWidth < 768;
+    const projectCount = repos.length;
+
+    if (isMobileView) {
+      setShowArrows(projectCount > 1);
+    } else {
+      setShowArrows(projectCount > 3);
+    }
+  }
+};
 
   const scrollLeft = () => {
     sliderRef.current.scrollLeft -= scrollAmount;
@@ -72,6 +83,12 @@ export default function Projects() {
       });
   }, []);
 
+  useEffect(() => {
+    checkOverflow();
+    window.addEventListener('resize', checkOverflow);
+    return () => window.removeEventListener('resize', checkOverflow);
+  }, [repos]);
+
   if (loading) return <p className="fetch-projects">Loading...</p>;
 
   return (
@@ -79,11 +96,21 @@ export default function Projects() {
       <h1 className="projects-heading">My Projects</h1>
       <h2 className="project-information">These are some of my projects i have been working or have worked on.</h2>
 
-      <div className="projects-wrapper">
-       <div className="arrow arrow-left" onClick={scrollLeft}><i className="fa-solid fa-chevron-left"></i></div>
-        <div className="arrow arrow-right" onClick={scrollRight}><i className="fa-solid fa-chevron-right"></i></div>
+      
+        <div className="projects-wrapper">
+        {showArrows && (
+          <>
+            <div className="arrow arrow-left" onClick={scrollLeft}>
+              <i className="fa-solid fa-chevron-left"></i>
+            </div>
+            <div className="arrow arrow-right" onClick={scrollRight}>
+              <i className="fa-solid fa-chevron-right"></i>
+            </div>
+          </>
+        )}
+      
 
-        <div className="projects-container" ref={sliderRef}>
+        <div className="projects-container" ref={sliderRef} style={{ justifyContent: showArrows ? 'flex-start' : 'center' }}>
           {infiniteRepos.map((repo, index) => {
             return (
               <div key={repo.name + "_" + index} className="project-card">

@@ -85,11 +85,12 @@ app.get("/projects", async (req, res) => {
     
       const aboutMeData = {
         Name: "William Hägg",
-        Title: "Junior Fullstack Developer",
-        ShortBio: "Junior Fullstack Developer with a degree in .NET Web Development since June 2025. I specialize in building scalable backend systems paired with modern, userfriendly frontend design.",
-        Buttons: "To learn more about my background and qualifications, please find my Resume and Degree Certificate attached below",
-        Description: "My journey into tech started with a lifelong fascination for computers, which evolved into a passion for building robust, scalable web applications. During my internship at Effectsoft, i had the opportunity to work on complex business systems using Blazor and ABP.IO where i learned the importance of clean code and agile collaboration.",
-        CurrentWork: "I am currently architecting FootyHub, a football managment app built with Clean Architecture and Vertical Slice pattern, while also trying constantly refining this portfolio. You can explore the technical details of my work in the projects section."
+        Title: ".NET Fullstack Developer",
+        ShortBio: "I am a .NET web developer with a degree in .NET Web Development (June 2025). I specialize in building scalable backend systems paired with modern, user friendly frontend design.",
+        Buttons: "To learn more about my background and qualifications, please find my Resume and Degree Certificate available below",
+        Description: "During my internship at Effectsoft, I had the opportunity to work on complex business systems using Blazor and ABP.IO where I learned the importance of clean code and agile collaboration.",
+        CurrentWork: "I am currently architecting FootyHub, a football management app built with Clean Architecture and the Vertical Slice pattern, while also constantly refining this portfolio. You can explore the technical details of my work in the projects section.",
+        OpenToWork: "I am currently seeking an entry-level software developer role where I can apply my .NET background while continuing to grow and adapt to new technologies and development stacks."
       };
     res.json(aboutMeData);
   });
