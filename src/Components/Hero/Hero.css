@@ -140,13 +140,20 @@
 }
 
 @media(max-width: 423px) {
-  .img-logo {
-  margin-top: 4rem;
-  width: 250px;
-  border-radius: 70px;
-  border: 7px solid rgba(135, 115, 115, 0.37);
-  box-shadow: #FFFFFF 2px 2px 8px;
+    .img-logo {
+    margin-top: 4rem;
+    width: 250px;
+    border-radius: 70px;
+    border: 7px solid rgba(135, 115, 115, 0.37);
+    box-shadow: #FFFFFF 2px 2px 8px;
+  }
 }
+
+@media(max-width:423px) {
+  .hero .hero-subtitle {
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 
