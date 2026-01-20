@@ -8,9 +8,6 @@ https://portfolio-williamhagg.netlify.app/
 
 ---
 
-##NOTICE 
-
-Email function with NodeMailer is not working at the moment duo to Renders free verision, it's not allowing sending Messages to my email duo to none subscription on Render.
 
 ## Purpose
 
@@ -34,9 +31,9 @@ Bootstrap was chosen due to its simplicity and built-in components. Since I had 
 ### Server Side
 - **Node.js**
 - **TypeScript**
-- **NodeMailer**
+- **Express.Js**
 
-The backend is responsible for handling email functionality and serves as a scalable foundation for future features.
+
 
 Earlier in development, project data was fetched directly from GitHub’s API on the client side. The backend architecture now allows better performance, security, and flexibility for future improvements such as caching or database integration.
 ---
@@ -55,7 +52,7 @@ This setup allows the frontend and backend to be deployed independently, making 
 ## Features
 
 - Fully responsive design
-- Contact form with email functionality (NodeMailer)
+- Contact form with email functionality (EmailJs)
 - Projects page
 - Modular React components
 - Clean and minimal UI
@@ -64,11 +61,11 @@ This setup allows the frontend and backend to be deployed independently, making 
 
 ## What I Learned
 
-- Building a fullstack application
-- React component architecture
+- Building and architecting fullstack application
+- React component architecture.
 - Node.js backend development with TypeScript
-- Email handling with NodeMailer
-- Deploying to Netlify and Render
+- Implementing third-party integrations like EmailJs.
+- Handling deployment pipelines on Netlify and Render.
 
 ---
 
