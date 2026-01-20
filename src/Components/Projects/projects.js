@@ -15,21 +15,29 @@ export default function Projects() {
   const sliderRef = useRef(null);
   const scrollAmount = 350;
   const [showArrows, setShowArrows] = useState(false);
-
   const infiniteRepos = showArrows ? [...repos, ...repos] : repos;
 
- const checkOverflow = () => {
-  if (sliderRef.current) {
-    const isMobileView = window.innerWidth < 768;
-    const projectCount = repos.length;
 
-    if (isMobileView) {
-      setShowArrows(projectCount > 1);
-    } else {
-      setShowArrows(projectCount > 3);
-    }
-  }
-};
+  useEffect (() => {
+     const checkOverflow = () => {
+        if (sliderRef.current) {
+          const isMobileView = window.innerWidth < 768;
+          const projectCount = repos.length;
+
+          if (isMobileView) {
+            setShowArrows(projectCount > 1);
+          } else {
+            setShowArrows(projectCount > 3);
+          }
+        }
+      };
+
+      checkOverflow();
+    window.addEventListener('resize', checkOverflow);
+    return () => window.removeEventListener('resize', checkOverflow);
+  }, [repos]);
+  
+
 
   const scrollLeft = () => {
     sliderRef.current.scrollLeft -= scrollAmount;
@@ -84,12 +92,7 @@ export default function Projects() {
       });
   }, []);
 
-  useEffect(() => {
-    checkOverflow();
-    window.addEventListener('resize', checkOverflow);
-    return () => window.removeEventListener('resize', checkOverflow);
-    
-  }, [repos]);
+  
 
   if (loading) return <p className="fetch-projects">Loading...</p>;
 
