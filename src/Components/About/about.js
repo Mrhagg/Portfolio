@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './about.css';
-import aboutLogo from '../../images/ai-image.jpg';
+import aboutLogo from '../../images/Wlliam_coding.jpg';
 import { BACKEND_URL } from '../../config'; 
 import Dropdown from "react-bootstrap/Dropdown";
 
@@ -46,7 +46,7 @@ const AboutMe = () => {
         <div className="download-link">
           
           <a className="btn btn-danger" href="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf" download="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf">
-            Download Certification
+             Certification
           </a>
         </div>
         <div className="download-link2">

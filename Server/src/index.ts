@@ -86,7 +86,7 @@ app.get("/projects", async (req, res) => {
       const aboutMeData = {
         Name: "William Hägg",
         Title: ".NET Fullstack Developer",
-        ShortBio: "I am a .NET web developer with a degree in .NET Web Development (June 2025). I specialize in building scalable backend systems paired with modern, user friendly frontend design.",
+        ShortBio: "I am a .NET web developer with a degree in .NET Web Development since June 2025. I specialize in building scalable backend systems paired with modern, user friendly frontend design.",
         Buttons: "To learn more about my background and qualifications, please find my Resume and Degree Certificate available below",
         Description: "During my internship at Effectsoft, I had the opportunity to work on complex business systems using Blazor and ABP.IO where I learned the importance of clean code and agile collaboration.",
         CurrentWork: "I am currently architecting FootyHub, a football management app built with Clean Architecture and the Vertical Slice pattern, while also constantly refining this portfolio. You can explore the technical details of my work in the projects section.",
