@@ -47,6 +47,8 @@ The application is deployed using the following services:
 
 This setup allows the frontend and backend to be deployed independently, making the application easier to maintain and scale.
 
+SHALL BE NOTED: The startup from render can be a little bit slow duo to being a free version of use, so it may take some seconds for the fetching of projects and about section.
+
 ---
 
 ## Features
