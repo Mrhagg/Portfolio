@@ -6,6 +6,7 @@ const allowedRepos = [
     "Portfolio",
     "BlazorGraduateAssignment",
     "FootyHub",
+    "FreseSkyltar"
     
   ];
 
