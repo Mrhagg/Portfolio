@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './about.css';
 import aboutLogo from '../../images/Wlliam_coding.jpg';
 import { BACKEND_URL } from '../../config'; 
-import Dropdown from "react-bootstrap/Dropdown";
 
 const AboutMe = () => {
   const [data, setData] = useState(null);
@@ -35,7 +34,6 @@ const AboutMe = () => {
       </div>
       
       <div className="About-name">
-         <h2>{data.Name}</h2>
       </div>
       <div className="About-main">
         <p>{data.ShortBio}</p>
@@ -44,13 +42,12 @@ const AboutMe = () => {
       <div className="cert">
         
         <div className="download-link">
-          
-          <a className="btn btn-danger" href="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf" download="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf">
+          <a className="btn-certification" href="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf" download="Examensbevis Webbutvecklare inom .NET 19980512-5151.pdf">
              Certification
           </a>
         </div>
         <div className="download-link2">
-          <a className="btn btn-danger" href="Cv-WilliamHägg.pdf" download="Cv-WilliamHägg.pdf">Resume</a>
+          <a className="btn-resume" href="Cv-WilliamHägg.pdf" download="Cv-WilliamHägg.pdf">Resume</a>
         </div>
       </div>
       <div className="About-main">

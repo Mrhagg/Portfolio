@@ -10,14 +10,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px; 
+    
 }
 
 
 .About-title h1 {
     font-size: 2.2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: #e3698c; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    font-style: italic;
+    color: #d7d5d5; 
     border-bottom: 2px solid #aba7a7; 
     padding-bottom: 10px;
     margin-bottom: 15px;
@@ -25,8 +28,9 @@
 
 .About-name h2 {
     font-size: 1.4em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     color: #e3698c;
     font-weight: 400; 
 }
@@ -35,32 +39,64 @@
     line-height: 1.6; 
     color: #FFFFFF;
     text-align:left; 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 1rem;
 }
 
 .current-text p {
     font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     color: #FFFFFF;
 }
 
 .work-text {
     font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     color: #FFFFFF;
 }
 
-.btn {
-  background-color: #e3698c;
-  color: #040404;
-  outline: none;
+.btn-certification {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #c9b5c2ed;
+    color: #040500b1;
+    box-shadow: 1px 1px 2px 1px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
 }
 
-.btn:hover {
-    background-color: #51515a;
+.btn-certification:hover {
+    transition: ease-in 0.3s;
+    color: #ece7e7;
+}
+
+.btn-resume {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #c9b5c2ed;
+    color: #040500b1;
+    box-shadow: 1px 1px 2px 1px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.btn-resume:hover {
+    transition: ease-in 0.3s;
+    color: #ece7e7;
 }
 
 .fetch-data {
@@ -79,32 +115,9 @@
 .btn-text {
     color: #FFFFFF;
     font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-}
-.custom-dropdown .btn-primary {
-    background-color: #71565f;
-    border-color: #7575b9;
-}
-
-.custom-dropdown .dropdown-menu {
-  background-color: #e9f3f6;
-}
-
-
-.custom-dropdown .dropdown-item{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
-    font-weight: 500;
-    padding: 10px 20px;
-}
-
-.custom-dropdown .dropdown-item:hover {
-  background-color: transparent; 
-  transition: ease-in-out 0.3s;
-  color: #c53838;
-  text-decoration: underline;
-  text-decoration-color: #13131b;              
+    font-weight: 400;
 }
 
 
@@ -125,7 +138,6 @@
     border: 2px solid rgba(227, 105, 140, 0.3); 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
-
 
 
 @media (max-width: 600px) {

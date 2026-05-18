@@ -35,7 +35,7 @@ function Skills() {
   return (
     <section className="main-container">
       <div className="main-content">
-        <h2>I'm a dedicated web developer with a degree in .NET development.</h2>
+        <h2>I'm a Web Developer with a degree in .NET development.</h2>
         <p className="main-info">
           Over the course of my education and internship, I have developed a strong foundation in several key areas:
         </p>
