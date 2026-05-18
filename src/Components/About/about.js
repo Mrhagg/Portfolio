@@ -50,15 +50,7 @@ const AboutMe = () => {
           </a>
         </div>
         <div className="download-link2">
-          <Dropdown className="custom-dropdown">
-              <Dropdown.Toggle variant="danger" id="dropdown-basic">
-                Choose Resume
-              </Dropdown.Toggle>
-            <Dropdown.Menu id="dropdown-menu">
-                <Dropdown.Item href="William_Hägg_Cv_EN.pdf" download="William_Hägg_Cv_EN.pdf">Resume-English</Dropdown.Item>
-                <Dropdown.Item href="William_Hägg_Cv_SV.pdf" download="William_Hägg_Cv_SV.pdf">Resume-Swedish</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+          <a className="btn btn-danger" href="Cv-WilliamHägg.pdf" download="Cv-WilliamHägg.pdf">Resume</a>
         </div>
       </div>
       <div className="About-main">
