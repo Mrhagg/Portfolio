@@ -28,7 +28,7 @@ export default function Projects() {
           if (isMobileView) {
             setShowArrows(projectCount > 1);
           } else {
-            setShowArrows(projectCount > 3);
+            setShowArrows(projectCount > 4);
           }
         }
       };
