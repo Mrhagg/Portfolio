@@ -100,7 +100,7 @@ export default function Projects() {
   return (
     <section className="projects-section">
       <h1 className="projects-heading">My Projects</h1>
-      <h2 className="project-information">These are some of my projects i have been working or have worked on.</h2>
+      <h2 className="project-information"> Projects i have been working on.</h2>
 
       
         <div className="projects-wrapper">

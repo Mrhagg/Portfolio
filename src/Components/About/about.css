@@ -1,142 +1,102 @@
 
 .About-page {
-    background: linear-gradient(130deg, #51515a, #13131b);
-    border-radius: 12px;       
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
-    padding: 30px;             
-    margin: 50px auto;        
+    background: rgba(22, 30, 49, 0.5) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;       
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5); 
+    padding: 40px;             
+    margin: 50px auto 5rem auto;        
     max-width: 800px;          
     width: 90%;                
     display: flex;
     flex-direction: column;
     gap: 20px; 
+    box-sizing: border-box;
     
 }
 
 
 .About-title h1 {
-    font-size: 2.2em;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 28px;
-    font-weight: 600;
-    font-style: italic;
-    color: #d7d5d5; 
-    border-bottom: 2px solid #aba7a7; 
+    font-weight: 700;
+    color: #FFFFFF; 
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05); 
     padding-bottom: 10px;
     margin-bottom: 15px;
 }
 
 .About-name h2 {
-    font-size: 1.4em;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
-    font-weight: 400;
-    color: #e3698c;
-    font-weight: 400; 
+    font-weight: 600;
+    color: #06b6d4;
 }
 
 .About-main p {
     line-height: 1.6; 
-    color: #FFFFFF;
+    color: #E5E7EB;
     text-align:left; 
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     margin-top: 1rem;
 }
 
-.current-text p {
-    font-size: 1.2em;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
+.current-text p, .work-text, .btn-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #E5E7EB;
 }
 
-.work-text {
-    font-size: 1.2em;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #FFFFFF;
-}
-
-.btn-certification {
-    border: 1px solid transparent;
-    border-radius: 10px;
-    padding: 10px;
+.btn-certification, .btn-resume {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
     text-decoration: none;
-    background-color: #c9b5c2ed;
-    color: #040500b1;
-    box-shadow: 1px 1px 2px 1px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    font-style: italic;
+    background: #6366F1; 
+    color: #FFFFFF !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
-.btn-certification:hover {
-    transition: ease-in 0.3s;
-    color: #ece7e7;
+.btn-certification:hover, .btn-resume:hover {
+    background: #4f46e5;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+    color: #FFFFFF !important;
 }
 
-.btn-resume {
-    border: 1px solid transparent;
-    border-radius: 10px;
-    padding: 10px;
-    text-decoration: none;
-    background-color: #c9b5c2ed;
-    color: #040500b1;
-    box-shadow: 1px 1px 2px 1px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    font-style: italic;
-}
-
-.btn-resume:hover {
-    transition: ease-in 0.3s;
-    color: #ece7e7;
-}
-
-.fetch-data {
-    color: #FFFFFF;
-}
-
-.fail-data {
+.fetch-data, .fail-data {
     color: #FFFFFF;
 }
 
 .cert{
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
-.btn-text {
-    color: #FFFFFF;
-    font-size: 1.2rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-}
 
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
+
 
 .about-logo {
     animation: fadeIn 1s ease-in forwards;
-    width: 250px;
-    border-radius: 20px;
+    width: 220px;
+    border-radius: 16px;
     opacity: 0;
-    border: 2px solid rgba(227, 105, 140, 0.3); 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -147,6 +107,11 @@
         border-radius: 8px;
     }
     .About-title h1 {
-        font-size: 1.8em;
+        font-size: 22px;
+    }
+
+    .cert {
+        flex-direction: column;
+        gap: 0.5em;
     }
 }

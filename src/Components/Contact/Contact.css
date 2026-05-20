@@ -53,7 +53,7 @@
   font-weight: bold;
   text-align: start;
   margin-right: 2rem;
-  color: #e3698c;
+  color: #06b6d4;
 }
 
 .contact-ways ul {
@@ -81,7 +81,7 @@
 
 
 .contact-ways a {
-  color: #e3698c;
+  color: #06b6d4;
   text-decoration: none;
   transform: color 0.3s;
 }
@@ -90,16 +90,13 @@
   color: #ffb6b9;
 }
 
-.contact-title h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  font-family:'Times New Roman', Times, serif;  
-  font-size: 43px;
-  font-weight: bold;
+.contact-title h1 {  
+  font-size: 45px;
+  font-weight: 700;
+  color: #FFFFFF;
   text-align: center;
   margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 .contact-form-right {
@@ -115,14 +112,14 @@
 
 
 .contact-form {
-  background: linear-gradient(30deg, #363637, #32324e);
-  padding: 50px;
-  border: 1px solid #979494;
-  border-radius: 12px;
-  box-shadow: 1px 5px 15px rgba(166, 170, 172, 0.991);
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 5rem;
+  background: rgba(22, 30, 49, 0.5) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
 }
 
 
@@ -144,26 +141,24 @@
   margin-top: 2rem;
 }
 
-textarea {
- width: 100%;
- max-width: 400px;
- padding: 10px;
- box-sizing: border-box;
- border-radius: 10px;
- font-family: 'Times New Roman', Times, serif;
- font-size: 17px;
- font-weight: 500;
-}
-
-input {
+input, textarea {
   width: 100%;
-  max-width: 400px;
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid red;
+  box-sizing: border-box;
+  background: rgba(11, 15, 25, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  transition: border-color 0.2s ease;
 }
 
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #06B6D4;
+}
 
+input { height: 45px; }
 
 .error {
   color: #f44336;
@@ -178,36 +173,37 @@ input {
 }
 
 .input-error {
-  border: 2px solid red;
-  color: red;;
+  border: 2px solid #f44336 !important;
+  color: #FFFFFF !important;
+}
+
+.input-success {
+  border: 2px solid #10B981 !important;
+  color: #FFFFFF !important;
 }
 
 .input-valid {
-  border: 2px solid #423f3f;
-  color: green;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF !important;
 }
 
 
 .form-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 40px;
-  font-size: 17px;
-  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
   font-weight: bold;
-  margin-top: 1rem;
-  border: 1px solid #e3dfdf;
-  border-radius: 10px;
-  background: linear-gradient(10deg, rgb(37, 36, 36), rgb(48, 48, 48) 30%, rgba(60, 58, 58, 0.991));
-  color: #fcfbfb;
+  border: none;
+  border-radius: 8px;
+  background: #6366F1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 2rem;
 }
 
-button:hover{
-  cursor: pointer;
-  color: #99949478;
-  transition: 0.3s ease-in-out;
+.form-btn:hover {
+  background: #4f46e5;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
 }
 
 .contact-alert-container {

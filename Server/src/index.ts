@@ -70,6 +70,25 @@ app.get("/projects", async (req, res) => {
       })
     );
 
+    const customOrder = [
+      "BlazorGraduateAssignment",
+      "FootyHub",
+      "FreseSkyltar",
+      "Portfolio"
+    ];
+
+    const sortedRepos = reposWithLanguages.sort((a, b) => {
+      let indexA = customOrder.indexOf(a.name);
+      let indexB = customOrder.indexOf(b.name);
+
+      if (indexA === -1) indexA = 99;
+      if (indexB === -1) indexB = 99;
+
+      return indexA - indexB;
+
+      res.json(sortedRepos)
+    })
+
     res.json(reposWithLanguages);
 
   } catch (err) {
@@ -85,12 +104,12 @@ app.get("/projects", async (req, res) => {
     
       const aboutMeData = {
         Name: "William Hägg",
-        Title: ".NET Web Developer",
-        ShortBio: "Growing up with a deep passion for tech and computers which naturally led me into programming, resulting in a degree in .NET Web Development in the summer of 2025.",
-        Buttons: "To learn more about my background and qualifications, please find my Resume and Degree Certificate available below",
-        Description: "When developing, i balance creative problem solving with a strict focus on writing clean, readable, and maintainable code. My primary tech stack is Microsoft .NET/C#, but I am equally comfortable working with TypeScript, JavaScript, and React.",
-        CurrentWork: "I have also built the architectural foundation for FootyHub, a football management app designed to practice Clean Architecture and the Vertical Slice pattern. It serves as a great showcase of how I structure business logic and codebase layout, and you can see the technical details in the projects section.",
-        OpenToWork: "I am actively seeking an entry-level software developer role where I can apply my .NET background while continuing to grow and adapt to new technologies and development stacks."
+        Title: ".Fullstack .NET Developer",
+        ShortBio: "Fullstack Developer specializing in the Microsoft .NET ecosystem, modern web technologies, and clean software design. I hold a degree in .NET Web Development from a Higher Vocational Education (Yrkeshögskola), where i focused on turning complex logic into robust, scalable applications.  ",
+        Buttons: "Explore my technical qualifications and academic background below:",
+        Description: "I focus on writing clean, maintainable, and well-tested code. While my core strength lies in C# and .NET, I am highly versatile and equally comfortable working frontend with TypeScript, JavaScript, and React.",
+        CurrentWork: "To showcase my architectural foundation, I am currently building FootyHub a football management platform designed around Clean Architecture and the Vertical Slice Pattern. This project serves as a real demonstration of how i design APIs, and structure business logic.",
+        OpenToWork: "I am actively seeking an entry-level software engineering role where I can hit the ground running, contribute to production-ready code, and continue expanding my expertise within cloud architecture and modern system design."
       };
     res.json(aboutMeData);
   });

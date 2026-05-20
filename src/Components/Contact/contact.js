@@ -11,13 +11,17 @@ function Contact () {
   const [errors, setErrors] = useState({});
   const [alert, setAlert] = useState({ show:false, variant: "", message: ""});
   const [isSending, setIsSending] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   const validateForm = () => {
     const newErrors = {};
   
+  const nameRegex = /^[A-Za-zÅåÄäÖö\s-]{3,}$/;
   if(!name.trim()) {
     newErrors.name = "You have to write your name.";
-  } 
+  } else if (!nameRegex.test(name.trim())) {
+    newErrors.name = "Name must be at least 3 letters long and contain only letters."
+  }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if(!email.trim()) {
@@ -36,6 +40,7 @@ function Contact () {
   };
  const handleSubmit = (e) => {
   e.preventDefault();
+  setHasSubmitted(true);
 
   if (!validateForm()) return;
 
@@ -63,6 +68,7 @@ function Contact () {
         setName("");
         setEmail("");
         setMessage("");
+        setHasSubmitted(false);
 
         setTimeout(() => {
           setAlert({ show: false, variant: "", message: "" });
@@ -79,13 +85,18 @@ function Contact () {
         setIsSending(false);
       });
   };
+
+  const getInputClass = (fieldName, value, validatorFn) => {
+    if (errors[fieldName]) return "input-error";
+
+    if (value.trim() && (validatorFn ? validatorFn(value) : true)) {
+      return "input-success";
+    }
+
+    return "input-valid";
+  };
  
 
-
-
-  
-
- 
   return (
     <div className="contact-container">
         <section className="contact-title">
