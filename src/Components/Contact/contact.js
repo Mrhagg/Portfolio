@@ -86,16 +86,7 @@ function Contact () {
       });
   };
 
-  const getInputClass = (fieldName, value, validatorFn) => {
-    if (errors[fieldName]) return "input-error";
-
-    if (value.trim() && (validatorFn ? validatorFn(value) : true)) {
-      return "input-success";
-    }
-
-    return "input-valid";
-  };
- 
+  
 
   return (
     <div className="contact-container">
