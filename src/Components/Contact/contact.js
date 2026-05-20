@@ -11,7 +11,7 @@ function Contact () {
   const [errors, setErrors] = useState({});
   const [alert, setAlert] = useState({ show:false, variant: "", message: ""});
   const [isSending, setIsSending] = useState(false);
-  const [hasSubmitted, setHasSubmitted] = useState(false);
+  
 
   const validateForm = () => {
     const newErrors = {};
@@ -40,7 +40,7 @@ function Contact () {
   };
  const handleSubmit = (e) => {
   e.preventDefault();
-  setHasSubmitted(true);
+  
 
   if (!validateForm()) return;
 
@@ -68,7 +68,7 @@ function Contact () {
         setName("");
         setEmail("");
         setMessage("");
-        setHasSubmitted(false);
+        
 
         setTimeout(() => {
           setAlert({ show: false, variant: "", message: "" });
