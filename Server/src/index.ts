@@ -32,7 +32,8 @@ app.get("/projects", async (req, res) => {
       "https://api.github.com/users/Mrhagg/repos?sort=updated",
       {
         headers: {
-          Authorization: `token ${process.env.GITHUB_TOKEN}`
+          Authorization: `token ${process.env.GITHUB_TOKEN}`,
+          "User-Agent": "Portfolio-Backend"
         }
       }
     );
@@ -54,7 +55,8 @@ app.get("/projects", async (req, res) => {
             `https://api.github.com/repos/${repo.owner}/${repo.name}/languages`,
             {
               headers: {
-                Authorization: `token ${process.env.GITHUB_TOKEN}`
+                Authorization: `token ${process.env.GITHUB_TOKEN}`,
+                "User-Agent": "Portfolio-Backend" 
               }
             }
           );
@@ -86,9 +88,10 @@ app.get("/projects", async (req, res) => {
 
       return indexA - indexB;
 
-      res.json(sortedRepos)
-    })
+      
+    });
 
+    
     res.json(reposWithLanguages);
 
   } catch (err) {
