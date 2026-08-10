@@ -32,8 +32,8 @@ app.get("/projects", async (req, res) => {
       "https://api.github.com/users/Mrhagg/repos?sort=updated",
       {
         headers: {
-          Authorization: `token ${process.env.GITHUB_TOKEN}`,
-          "User-Agent": "Portfolio-Backend"
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          "User-Agent": "MyPortfolioApp"
         }
       }
     );
